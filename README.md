@@ -1,13 +1,10 @@
-# FUTURE_FS_02 — Client Lead Management System (Mini CRM)
+# LeadFlow CRM — Client Lead Management System (Mini CRM)
 
-**Future Interns — Full Stack Web Development Internship (Track Code: FS)**  
-**Task 2: Client Lead Management System (Mini CRM)**
-
-A functional, responsive Client Lead Management System (Mini CRM) built with **React**, **Vite**, and **Node.js/Express**. Designed to solve a fundamental business need: capturing incoming website contact form inquiries, tracking their sales pipeline progression (`New` → `Contacted` → `In Discussion` → `Converted`), logging timestamped follow-up conversations, and providing real-time pipeline analytics behind a secure admin interface.
+A full-stack, responsive Client Lead Management System (Mini CRM) built with **React**, **Vite**, and **Node.js/Express**. Designed to solve a fundamental business need: capturing incoming website contact form inquiries, tracking their sales pipeline progression (`New` → `Contacted` → `In Discussion` → `Converted` / `Lost`), logging timestamped follow-up conversations, and providing real-time pipeline analytics behind a secure admin interface.
 
 ---
 
-## 🎯 Task Objective & Real-World Use Case
+## 🎯 Overview & Use Case
 
 Whenever prospective clients submit an inquiry on an agency, freelance, or startup website, businesses require a central command system to:
 1. **Store & Qualify**: Ingest form submissions with source attribution.
@@ -17,22 +14,22 @@ Whenever prospective clients submit an inquiry on an agency, freelance, or start
 
 ---
 
-## ✨ Key Features Implemented
+## ✨ Features
 
-- ✔ **Comprehensive Lead Listing**: View names, emails, phone numbers, companies, acquisition sources, budgets, and timestamps.
-- ✔ **Interactive Status Workflow**: Quick status update selector (`New`, `Contacted`, `In Discussion`, `Converted`, `Lost`).
-- ✔ **Follow-Up Notes & Activity Timeline**: Log timestamped conversation notes, meeting takeaways, and next steps for any lead.
-- ✔ **Secure Admin Authentication**: Protected dashboard with token-based session management, password hashing, and logout controls.
-- ✔ **Website Contact Form Simulator**: Dedicated tab demonstrating end-to-end integration by dispatching live inquiries to `POST /api/leads` and watching them populate the CRM in real time.
-- ✔ **Search & Multi-Level Filtering**:
+- **Comprehensive Lead Listing**: View contact names, emails, phone numbers, companies, acquisition sources, budgets, and timestamps.
+- **Interactive Status Workflow**: Quick status update selector (`New`, `Contacted`, `In Discussion`, `Converted`, `Lost`).
+- **Follow-Up Notes & Activity Timeline**: Log timestamped conversation notes, meeting takeaways, and next steps for any lead.
+- **Secure Admin Authentication**: Protected dashboard with token-based session management, password hashing, and logout controls.
+- **Website Contact Form Simulator**: Dedicated tab demonstrating end-to-end integration by dispatching live inquiries to `POST /api/leads` and watching them populate the CRM in real time.
+- **Search & Multi-Level Filtering**:
   - Full-text search across name, email, company, and message.
   - Filter by pipeline status (`All`, `New`, `Contacted`, `In Discussion`, `Converted`, `Lost`).
   - Filter by acquisition source (`Website Contact Form`, `Landing Page`, `Referral`, `LinkedIn`, `Direct`).
   - Sort by Newest, Oldest, or Name (A-Z).
-- ✔ **Real-Time Analytics Cards**: Instant metrics on Total Leads, Inbound Inquiries, In Discussion, Converted Deals, and Conversion Rate (%).
-- ✔ **CSV Export**: One-click data export for client reports, spreadsheets, or backup.
-- ✔ **Dark & Light Mode**: Accessible theme switcher persisted in `localStorage`.
-- ✔ **Production Ready**: Single-command development and consolidated Express production server.
+- **Real-Time Analytics Cards**: Instant metrics on Total Leads, Inbound Inquiries, In Discussion, Converted Deals, and Conversion Rate (%).
+- **CSV Export**: One-click data export for client reports, spreadsheets, or backup.
+- **Dark & Light Mode**: Accessible theme switcher persisted in `localStorage`.
+- **Production Ready**: Single-command development and consolidated Express production server.
 
 ---
 
@@ -49,20 +46,14 @@ Whenever prospective clients submit an inquiry on an agency, freelance, or start
 
 ### Prerequisites
 - [Node.js](https://nodejs.org) (v18 or higher recommended)
-- `npm` (bundled with Node.js)
-- `git`
+- `npm`
 
-### 1. Clone or Navigate to the Folder
-```bash
-cd FUTURE_FS_02
-```
-
-### 2. Install Dependencies
+### 1. Installation
 ```bash
 npm install
 ```
 
-### 3. Start Development Server
+### 2. Development Server
 ```bash
 npm run dev
 ```
@@ -70,7 +61,7 @@ npm run dev
 - **Backend API**: http://127.0.0.1:3002
 *(The Vite development server automatically proxies `/api` requests to Express).*
 
-### 4. Build and Run Production Server
+### 3. Production Build
 ```bash
 npm run build
 npm start
@@ -79,9 +70,9 @@ Serves both the compiled client dashboard and the REST API together on port 3002
 
 ---
 
-## 🔐 Default Admin Credentials
+## 🔐 Admin Authentication
 
-For review and evaluation, use the following preconfigured admin credentials (or use the one-click **"Quick Fill Credentials"** button on the login screen):
+Preconfigured credentials for evaluation:
 
 - **Email**: `admin@crm.local`
 - **Password**: `admin123`
@@ -123,58 +114,8 @@ For review and evaluation, use the following preconfigured admin credentials (or
 
 ---
 
-## 📤 How to Push to GitHub
-
-Follow the official Future Interns repository naming rule:
-
-### Step 1: Create Repository on GitHub
-1. Go to [github.com/new](https://github.com/new).
-2. Repository name: **`FUTURE_FS_02`** *(exact required name for Task 2)*.
-3. Visibility: **Public** *(required for verification)*.
-4. Leave "Add a README" **unchecked** (project already includes this README).
-5. Click **Create repository**.
-
-### Step 2: Push from Terminal
-Run the following commands inside `F:\internship\FUTURE_FS_02`:
-
-```bash
-# Initialize git
-git init
-
-# Stage all files
-git add .
-
-# Create initial commit
-git commit -m "feat: complete Task 2 Client Lead Management System (Mini CRM)"
-
-# Rename default branch to main
-git branch -M main
-
-# Link remote to your GitHub repository
-git remote add origin https://github.com/AnasAli30/FUTURE_FS_02.git
-
-# Push code to GitHub
-git push -u origin main
-```
-
----
-
-## 💼 LinkedIn & Submission Guidelines
-
-Per the **Future Interns** internship guidelines:
-- **Task Post**: Once your repository is pushed and/or deployed, post an update on LinkedIn highlighting:
-  - What you built: Client Lead Management System (Mini CRM)
-  - Key technical learnings: Full-stack CRUD, API rate limiting, token authentication, dynamic pipeline analytics, activity logging
-  - UI screenshots or short demo screen recording
-  - GitHub repo link: `https://github.com/AnasAli30/FUTURE_FS_02`
-  - Tag **@Future Interns**
-- **Portal Submission**: Submit through the official Task Submission Portal using your **CIN ID** when the portal opens.
-
----
-
 ## 👤 Author
 
 - **Name**: Anas Ali
 - **GitHub**: [@AnasAli30](https://github.com/AnasAli30)
 - **Role**: Full-stack and Web3 Developer
-- **Internship**: Future Interns — Full Stack Web Development (Track Code: FS)
